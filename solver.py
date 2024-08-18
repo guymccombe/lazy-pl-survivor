@@ -54,7 +54,7 @@ class SurvivorLinearOptimizer:
         odds: pd.DataFrame,
         strengths: pd.DataFrame,
         horizon: int = 12,
-        decay: int = 0.95,
+        decay: int = 0.975,
     ):
         self.next_week = next_week
         self.teams = teams
@@ -75,7 +75,7 @@ class SurvivorLinearOptimizer:
         for id, name in self.teams.items():
             if name not in self.used_teams:
                 row = {"id": id, "name": name}
-                for week in range(self.next_week, self.horizon):
+                for week in range(self.next_week, self.horizon+2):
                     for match in json:
                         if match["event"] < week:
                             continue
