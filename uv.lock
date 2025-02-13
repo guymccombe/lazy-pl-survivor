@@ -176,7 +176,7 @@ requires-dist = [
     { name = "python-dateutil", specifier = "==2.9.0.post0" },
     { name = "pytz", specifier = "==2024.1" },
     { name = "requests", specifier = "==2.32.3" },
-    { name = "scipy" },
+    { name = "scipy", specifier = ">=1.15.1" },
     { name = "six", specifier = "==1.16.0" },
     { name = "typing-extensions", specifier = "==4.12.2" },
     { name = "tzdata", specifier = "==2024.1" },
